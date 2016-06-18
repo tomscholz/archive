@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+  font-family: 'Open sans'
+}
+
+a {
+  text-decoration: none;
+  color: #ED6F75;
+}
+
+li {
+  list-style-type: none;
+}
+
+.nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 60px;
+  padding: 0 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
+  z-index: 1;
+}
+  .nav .home {
+    float: left;
+    height: 100%;
+    line-height: 60px;
+  }
+    .nav .home .back {
+      margin-left: 20px;
+      font-size: 12px;
+    }
+  .nav .links {
+    float: right;
+    height: 100%;
+    margin: 0;
+  }
+  .nav .links a {
+    line-height: 60px;
+  }
+
+
+#docs-iframe-wrapper {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+  #docs-iframe {
+    border: 0;
+    height: 100%;
+    width: 100%;
+  }
