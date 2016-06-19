@@ -26,12 +26,13 @@
       </div>
 
       <ul class="links">
-        <li><a href="#">0.97.5</a></li>
+        <li><a id="0.97.5" href="?version=0.97.5">0.97.5</a></li>
+        <li><a id="0.97.4" href="?version=0.97.4">0.97.4</a></li>
       </ul>
     </div>
 
     <div id="docs-iframe-wrapper">
-      <iframe id="docs-iframe" src="0.97.5/index.html"></iframe>
+      <iframe id="docs-iframe"></iframe>
     </div>
 
     <!--  Google Analytics  -->
@@ -44,6 +45,39 @@
     ga('create', 'UA-56218128-1', 'auto');
     ga('require', 'displayfeatures');
     ga('send', 'pageview');
+    </script>
+
+    <script type="text/javascript">
+      (function() {
+        function getQueryParams(qs) {
+          qs = qs.split('+').join(' ');
+
+          var params = {},
+              tokens,
+              re = /[?&]?([^=]+)=([^&]*)/g;
+
+          while (tokens = re.exec(qs)) {
+            params[decodeURIComponent(tokens[1])] = decodeURIComponent(tokens[2]);
+          }
+
+          return params;
+        }
+        var query = getQueryParams(document.location.search);
+        var version;
+
+        if (Object.keys(query).length > 0) {
+          version = query.version;
+        } else {
+          version = '0.97.5';
+        }
+
+        var currLink = document.getElementById(version);
+        if (currLink.classList)
+          currLink.classList.add('active');
+        else
+          currLink.className += ' active';
+        document.getElementById('docs-iframe').src = version + '/index.html';
+      })();
     </script>
   </body>
 </html>

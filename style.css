@@ -36,9 +36,22 @@ li {
     height: 100%;
     margin: 0;
   }
+  .nav .links li {
+    float: left;
+  }
   .nav .links a {
+    display: block;
+    padding: 0 10px;
+    height: 60px;
     line-height: 60px;
   }
+    .nav .links a:not(.active):hover {
+      background-color: #eee;
+    }
+    .nav .links .active {
+      background-color: #ff999e;
+      color: #fff;
+    }
 
 
 #docs-iframe-wrapper {
