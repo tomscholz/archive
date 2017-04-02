@@ -134,7 +134,7 @@
     });
 
     window.index.add({
-      href: 'http://materializecss.com/mobile.html',
+      href: 'mobile.html',
       title: 'Mobile',
       body: 'Mobile only interactive components.'
     });
